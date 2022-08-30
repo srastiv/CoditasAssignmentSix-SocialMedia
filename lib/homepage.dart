@@ -28,7 +28,10 @@ class _HomePageState extends State<HomePage> {
     ];
     return Scaffold(
       extendBody: true,
+
       bottomNavigationBar: CurvedBottomNavigationBar(),
+
+      // CurvedBottomNavigationBar(),
       body: tabs[_currentIndex],
       //BookmarkedPosts(widget.originalListFromAPI),
       // MyFeed(widget.originalListFromAPI),
@@ -37,8 +40,8 @@ class _HomePageState extends State<HomePage> {
 
   CurvedNavigationBar CurvedBottomNavigationBar() {
     return CurvedNavigationBar(
-      buttonBackgroundColor: Colors.transparent.withOpacity(0.2),
-      backgroundColor: Colors.transparent,
+      buttonBackgroundColor: Colors.transparent.withOpacity(0.1),
+      backgroundColor: Colors.transparent.withOpacity(0),
       color: Colors.transparent.withOpacity(0.2),
       items: const <Widget>[
         Icon(
@@ -54,19 +57,23 @@ class _HomePageState extends State<HomePage> {
       ],
       index: 0,
       animationDuration: Duration(milliseconds: 200),
-      onTap: (index) {
-        _currentIndex = index;
-        debugPrint("current index is $index");
+      onTap: (indexx) {
+        _currentIndex = indexx;
+        debugPrint("current index is $indexx");
       },
     );
   }
 }
 
+
+
+
 // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 //       floatingActionButton: FloatingActionButton(
+//         child: Icon(Icons.home_filled),
 //         onPressed: () {},
 //       ),
-//       bottomNavigationBar: BottomAppBar(
+// BottomAppBar(
 //         shape: CircularNotchedRectangle(),
 //         notchMargin: 15,
 //         color: Colors.blue,

@@ -15,7 +15,7 @@ class BookmarkedPosts extends StatefulWidget {
 class _BookmarkedPostsState extends State<BookmarkedPosts> {
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<BookmarkProvider>(context).bookmarkedPosts.length);
+    //print(Provider.of<BookmarkProvider>(context).bookmarkedPosts.length);
     List toUseList = Provider.of<BookmarkProvider>(context).bookmarkedPosts;
     return Container(
       padding: EdgeInsets.only(left: 15, right: 15),
